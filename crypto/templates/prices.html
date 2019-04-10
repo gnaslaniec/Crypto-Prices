@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if notfound %}
+
+    {{ notfound }}
+
+{% else %}
+    {% if crypto.Response %}
+        <h1>Moeda {{ quote }} não foi encontrada!</h1>
+    {% else %}
+    {% for key,value in crypto.DISPLAY.items %}
+        
+        <div class="jumbotron">
+            <h1 class="display-4">{{ key }}</h1>
+            <strong>Preço R$: </strong>{{ value.BRL.PRICE }}</br>
+            <strong>Preço USD: </strong>{{ value.USD.PRICE }}</br>
+            <strong>Alta do Dia: </strong>{{ value.BRL.HIGH24HOUR }}</br>
+            <strong>Baixa do Dia: </strong>{{ value.BRL.LOW24HOUR }}</br>
+            <strong>Cap. de Mercado: </strong>{{ value.BRL.MKTCAP }}</br>
+        </div>
+        </br></br>
+        
+    {% endfor %}
+    {% endif %}
+{% endif %}
+
+{% endblock %}
