@@ -19,10 +19,7 @@
               
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                      <a class="nav-link" href="{% url 'prices' %}">Preços</a>
-                    </li>
-                    </ul>
+                  </ul>
                   <form class="form-inline my-2 my-lg-0" method="POST" action="{% url 'prices' %}">
                     {% csrf_token %}
                     <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar moeda" aria-label="Search" name="quote">
