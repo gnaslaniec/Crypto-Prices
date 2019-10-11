@@ -3,7 +3,7 @@ Site feito em Django que consome a API do CryptoCompare e exibe notícias e pre�
 
 ### Pré-requisitos e uso
 
-Os requisistos são o Python na versão 3+ e instalar O Django e a biblioteca Requests através do requiriments.txt
+Os requisistos são o Python na versão 3+ e instalar as bibliotecas Django e Requests através do requiriments.txt
  
 Criar um ambiente virtual
 ```
